@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas Ciberpunk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cyberpunk-panel">
+            <h1 class="glitch-text">Generador de Contraseñas</h1>
+            
+            <div class="control-group">
+                <label for="longitud">Longitud de la Contraseña:</label>
+                <div class="slider-container">
+                    <input type="range" id="longitud" min="5" max="15" value="10" class="slider">
+                    <span id="valor-longitud">10</span>
+                </div>
+            </div>
+
+            <div class="options-group">
+                <div class="option">
+                    <input type="checkbox" id="mayusculas" checked>
+                    <label for="mayusculas">Mayúsculas</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="minusculas" checked>
+                    <label for="minusculas">Minúsculas</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="numeros" checked>
+                    <label for="numeros">Números</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="simbolos" checked>
+                    <label for="simbolos">Símbolos</label>
+                </div>
+            </div>
+
+            <button id="generar" class="cyber-button">GENERAR</button>
+
+            <div class="password-display">
+                <input type="text" id="contraseña" readonly>
+                <button id="copiar" class="copy-button">Copiar</button>
+            </div>
+
+            <div class="security-meter">
+                <div class="meter-bar">
+                    <div id="security-level" class="meter-fill"></div>
+                </div>
+                <span id="security-text">Seguridad: Alta</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
